@@ -19,6 +19,11 @@ minify_html = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+# The taxonomies to be rendered for the site and their configuration for the default languages
+taxonomies = [
+   {name = "tags", feed = true},
+]
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -37,6 +42,11 @@ minify_html = true
 # Whether to build a search index for the french version
 build_search_index = true
 
+# The taxonomies to be rendered for the site and their configuration for the french version
+taxonomies = [
+   {name = "tags", feed = true},
+]
+
 [extra]
 # The theme's skin
 skin = "lavender"
@@ -45,4 +55,5 @@ skin = "lavender"
 menu = [
   { name = "posts", url = "posts", tailing_slash = true},
   { name = "archive", url = "archive", tailing_slash = true},
+  { name = "tags", url = "tags", tailing_slash = true},
 ]
