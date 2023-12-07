@@ -53,6 +53,12 @@ menu = [
   { name = "tags", url = "tags", tailing_slash = true},
 ]
 
+# Extra menu to show on the footer, below socials section.
+footer_menu = [
+    {url = "about", name = "about", trailing_slash = true},
+    {url = "sitemap.xml", name = "sitemap", trailing_slash = false},
+]
+
 # Enable a copyright notice for the footer, shown between socials and the "Powered by" text.
 # $TITLE will be replaced by the website's title.
 # You can use $CURRENT_YEAR to automatically insert the current year.
@@ -65,3 +71,8 @@ copyright = "[$TITLE](https://zzmzaw.dev) © $CURRENT_YEAR by [$AUTHOR](https://
 # If a translation is missing for language, the `copyright` value will be used instead.
 copyright_translations.fr = "[$TITLE](https://zzmzaw.dev/fr) © $CURRENT_YEAR par [$AUTHOR](https://zzmzaw.dev/fr/about) est sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) ![Creative Commons logo](/img/cc/cc.svg#cc) ![Creative Commons By icon](/img/cc/by.svg#cc) ![Creative Commons SA icon](/img/cc/sa.svg#cc)"
 
+socials = [
+    { name = "github", url = "https://github.com/ZzMzaw", icon = "github" },
+    { name = "gitlab", url = "https://gitlab.com/ZzMzaw", icon = "gitlab" },
+    { name = "rootme", url = "https://www.root-me.org/ZzMzaw", icon = "rootme" },
+]
