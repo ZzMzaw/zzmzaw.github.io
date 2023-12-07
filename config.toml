@@ -65,6 +65,28 @@ menu = [
   { name = "tags", url = "tags", tailing_slash = true},
 ]
 
+# The icons available can be found in "social_icons" in the "static" folder.
+socials = [
+    { name = "github", url = "https://github.com/ZzMzaw", icon = "github" },
+    { name = "gitlab", url = "https://gitlab.com/ZzMzaw", icon = "gitlab" },
+    { name = "matrix", url = "https://matrix.to/#/@zzmzaw:zzmzaw.dev", icon = "matrix" },
+    { name = "discord", url = "https://discordapp.com/users/1199491352623337594", icon = "discord" },
+    { name = "rootme", url = "https://www.root-me.org/ZzMzaw", icon = "rootme" },
+    { name = "hackthebox", url = "https://app.hackthebox.com/users/1823204", icon = "hackthebox" },
+    { name = "hacker-news", url = "https://news.ycombinator.com/user?id=zzmzaw", icon = "hacker-news" },
+    { name = "reddit", url = "https://www.reddit.com/user/ZzMzaw", icon = "reddit" },
+    { name = "stack-overflow", url = "https://stackoverflow.com/users/23289335/zzmzaw", icon = "stack-overflow" },
+    { name = "xda", url = "https://xdaforums.com/m/zzmzaw.11836937/", icon = "xda" },
+    # { name = "bitcoin", url = "toto", icon = "bitcoin" },
+    # { name = "paypal", url = "toto", icon = "paypal" },
+]
+
+# Extra menu to show on the footer, below socials section.
+footer_menu = [
+    {url = "about", name = "about", trailing_slash = true},
+    {url = "sitemap.xml", name = "sitemap", trailing_slash = false},
+]
+
 # Enable a copyright notice for the footer, shown between socials and the "Powered by" text.
 # $TITLE will be replaced by the website's title.
 # You can use $CURRENT_YEAR to automatically insert the current year.
