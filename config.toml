@@ -1,26 +1,23 @@
-# The URL the site will be built for
 base_url = "https://zzmzaw.dev"
 
-# The site title for the default language
-title = "ZzMzaw's blog"
 author = "ZzMzaw"
 
-# The default language; used in feeds.
-default_language = "en"
+compile_sass = true
+minify_html = true
 
 # The site theme to use.
 theme = "tabi"
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+# To translate the entire theme, there must be a file with the same ISO 639-1
+# (or IETF BCP 47) Code in the `i18n` folder of your site or the tabi theme
+# For example, "i18n/fr.toml" for French or "i18n/zh-Hans.toml" for Simplified Chinese.
+# Otherwise the theme will be in English.
+# See https://welpo.github.io/tabi/blog/faq-languages/ for more details.
+default_language = "en"
 
-# When set to "true", the generated HTML files are minified.
-minify_html = true
-
-# When set to "true", a feed is automatically generated.
-generate_feed = true
-
-# Whether to build a search index to be used later on by a JavaScript library
+# The title, feeds and search for the default language
+title = "ZzMzaw's blog"
+generate_feeds = true
 build_search_index = true
 
 # The taxonomies to be rendered for the site and their configuration for the default languages
@@ -50,22 +47,12 @@ index_format = "elasticlunr_json"
 highlight_code = true
 
 [languages.fr]
-# The site title for the french version
+# The title, feeds and search for the french language
 title = "Le blog de ZzMzaw"
-
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
-
-# When set to "true", the generated HTML files are minified.
-minify_html = true
-
-# When set to "true", a feed is automatically generated.
-generate_feed = true
-
-# Whether to build a search index for the french version
+generate_feeds = true
 build_search_index = true
 
-# The taxonomies to be rendered for the site and their configuration for the french version
+# The taxonomies to be rendered for the site and their configuration for the french language
 taxonomies = [
    {name = "tags", feed = true},
 ]
@@ -106,8 +93,6 @@ socials = [
     { name = "reddit", url = "https://www.reddit.com/user/ZzMzaw", icon = "reddit" },
     { name = "stack-overflow", url = "https://stackoverflow.com/users/23289335/zzmzaw", icon = "stack-overflow" },
     { name = "xda", url = "https://xdaforums.com/m/zzmzaw.11836937/", icon = "xda" },
-    # { name = "bitcoin", url = "toto", icon = "bitcoin" },
-    # { name = "paypal", url = "toto", icon = "paypal" },
 ]
 
 # Extra menu to show on the footer, below socials section.

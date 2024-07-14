@@ -1,5 +1,4 @@
 +++
-path = "/"
 title = "Derniers articles"
 sort_by = "date"
 template = "section.html"
