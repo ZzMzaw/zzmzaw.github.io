@@ -96,6 +96,10 @@ socials = [
     { name = "xda", url = "https://xdaforums.com/m/zzmzaw.11836937/", icon = "xda" },
 ]
 
+# Quick navigation buttons.
+# Adds "go up" and "go to comments" buttons on the bottom right (hidden for mobile).
+quick_navigation_buttons = true
+
 # Extra menu to show on the footer, below socials section.
 footer_menu = [
     {url = "about", name = "about", trailing_slash = true},
