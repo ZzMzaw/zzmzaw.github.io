@@ -1,6 +1,6 @@
 +++
 title = "My very first post"
-#updated = 2024-07-14
+updated = 2024-07-25
 description = "Why Zola, tabi and the rest"
 
 [taxonomies]
@@ -42,7 +42,7 @@ I was looking for a minimalist theme, properly documented, able to work without 
 tabi just ticks all those boxes and even more.
 Last but not least, tabi's maintainer is really open to contribution and I really appreciated the first one I did.
 
-Anyway, this is the first step of a new adventude where I'll try to documented what I do at home, both in English and French.
+Anyway, this is the first step of a new adventure where I'll try to document what I do at home, both in English and French.
 
 See you later...
 
