@@ -1,6 +1,6 @@
 +++
 title = "Mon tout premier post"
-#updated = 2024-07-14
+updated = 2024-07-25
 description = "Pourquoi Zola, tabi et le reste"
 
 [taxonomies]
@@ -43,6 +43,9 @@ tabi coche toutes ces cases et bien plus encore.
 Qui plus est, son mainteneur est vraiment ouvert aux contributions et j'ai beaucoup apprécié la première que j'ai faite.
 
 Quoi qu'il en soit, c'est le premier pas d'une nouvelle aventure où je vais essayer de documenter ce que je fais à la maison, à la fois en français et en anglais.
+
+Pour ceux qui ne lisent que le français, je ne peux que vous conseiller d'apprendre l'anglais car un grand nombre de ressources utiles sur Internet sont en anglais.
+N'hésitez pas à utiliser mes traductions, bien qu'imparfaites, pour vous mettre le pied à l'étrier.
 
 À bientôt...
 
