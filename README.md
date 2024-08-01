@@ -16,4 +16,4 @@ Commit messages should start with a type as follow:
 - `conf`: a change to the website configuration (no content)
 - `blog`: a change to add a new post or update an existing one
 
-All commit message should start with a verb after the type.
+All commit message should start with a verb after the type and no capital letter.
