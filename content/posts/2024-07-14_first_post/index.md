@@ -1,6 +1,6 @@
 +++
 title = "My very first post"
-updated = 2024-07-25
+updated = 2024-11-11
 description = "Why Zola, tabi and the rest"
 
 [taxonomies]
@@ -9,7 +9,7 @@ tags = ["ssg", "zola", "tabi"]
 
 This is my very first blog post using Zola (<https://www.getzola.org/>) with tabi (<https://welpo.github.io/tabi/>) as a theme.
 
-As anyone starting a new blog using a SSG [^1], I was about to write a first post on how I set it up.
+As anyone starting a new blog using an SSG [^1], I was about to write a first post on how I set it up.
 
 Nevertheless, almost everything is already documented:
 - How to install Zola:\
@@ -20,20 +20,20 @@ Nevertheless, almost everything is already documented:
 <https://www.getzola.org/documentation/themes/installing-and-using-themes/>
 - How to configure tabi:\
 <https://welpo.github.io/tabi/blog/mastering-tabi-settings/>
-- How to host a Zola website on Github Pages:\
+- How to host a Zola website on GitHub Pages:\
 <https://www.getzola.org/documentation/deployment/github-pages/>
 
 All the information above makes setting a website similar to the one you're reading pretty straightforward.
 
-Instead of rewritting what is already well written, I'll just explain how I ended up using Zola and tabi.
+Instead of rewriting what is already well written, I'll just explain how I ended up using Zola and tabi.
 
-I really appreciate Rust [^2] programming language and I decided to look for an Rust-based FOSS [^3] SSG.
+I really appreciate Rust [^2] programming language and I decided to look for a Rust-based FOSS [^3] SSG.
 
 Zola was the first hit of my search.
 It is not only FOSS but has also all the features I am looking for: multilingual, syntax highlighting, tags and shortcodes.
 
 I played with Hugo (<https://gohugo.io/>) a few years ago and tried to create my own theme.
-This was so time consuming that I gave up on both the theme and the blog...
+This was so time-consuming that I gave up on both the theme and the blog...
 
 I started to look around Zola's themes in order to avoid doing the same mistake twice.
 
@@ -46,6 +46,6 @@ Anyway, this is the first step of a new adventure where I'll try to document wha
 
 See you later...
 
-[^1]: **SSG** stands for **S**tatic **S**ite **G**enerator, a software which generates plain HTML/JS/CSS web pages from text inputs. Those pages can be hosted anywhere without any runtime required on server side.
+[^1]: **SSG** stands for **S**tatic **S**ite **G**enerator, a software which generates plain HTML/JS/CSS web pages from text inputs. Those pages can be hosted anywhere without any server side work needed.
 [^2]: <https://www.rust-lang.org/>
 [^3]: **FOSS** stands for **F**ree and **O**pen **S**ource **S**oftware
