@@ -145,3 +145,20 @@ copyright = "[$TITLE](https://zzmzaw.dev) © $CURRENT_YEAR by [$AUTHOR](https://
 # If a translation is missing for language, the `copyright` value will be used instead.
 copyright_translations.fr = "[$TITLE](https://zzmzaw.dev/fr) © $CURRENT_YEAR par [$AUTHOR](https://zzmzaw.dev/fr/about) est sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) ![Creative Commons logo](/img/cc/cc.svg#cc) ![Creative Commons By icon](/img/cc/by.svg#cc) ![Creative Commons SA icon](/img/cc/sa.svg#cc)"
 
+# Custom security headers. What urls should your website be able to connect to?
+# You need to specify the CSP and the URLs associated with the directive.
+# Useful if you want to load remote content safely (embed YouTube videos, which needs frame-src, for example).
+# Default directive is self.
+# Default config, allows for https remote images and embedding YouTube and Vimeo content.
+# This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
+allowed_domains = [
+    { directive = "font-src", domains = ["'self'", "data:"] },
+    { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
+    { directive = "media-src", domains = ["'self'", "https://cdn.jsdelivr.net/"] },
+    { directive = "script-src", domains = ["'self'"] },
+    { directive = "style-src", domains = ["'self'"] },
+]
+
+# Enable the CSP directives configured (or default).
+# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
+enable_csp = true
