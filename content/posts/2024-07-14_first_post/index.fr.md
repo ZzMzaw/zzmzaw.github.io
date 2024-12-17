@@ -1,10 +1,10 @@
 +++
 title = "Mon tout premier post"
-updated = 2024-11-11
+updated = 2024-12-17
 description = "Pourquoi Zola, tabi et le reste"
 
 [taxonomies]
-tags = ["ssg", "zola", "tabi"]
+tags = ["blog", "zola", "tabi"]
 +++
 
 Ceci est mon tout premier post en utilisant Zola (<https://www.getzola.org/>) avec tabi (<https://welpo.github.io/tabi/>) comme thème.
