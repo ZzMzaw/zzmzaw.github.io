@@ -148,12 +148,12 @@ footer_menu = [
 # You can use $CURRENT_YEAR to automatically insert the current year.
 # $SEPARATOR will be replaced by the `separator` variable.
 # Markdown is supported (links, emphasis, etc).
-copyright = "[$TITLE](https://zzmzaw.dev) © $CURRENT_YEAR by [$AUTHOR](https://zzmzaw.dev/about) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) ![Creative Commons logo](/img/cc/cc.svg#cc) ![Creative Commons By icon](/img/cc/by.svg#cc) ![Creative Commons SA icon](/img/cc/sa.svg#cc)"
+copyright = "[$TITLE](https://zzmzaw.github.io) © $CURRENT_YEAR by [$AUTHOR](https://zzmzaw.github.io/about) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) ![Creative Commons logo](/img/cc/cc.svg#cc) ![Creative Commons By icon](/img/cc/by.svg#cc) ![Creative Commons SA icon](/img/cc/sa.svg#cc)"
 
 # If `translate_copyright` is set to true, `copyright_translations` can be empty but must exist.
 # A build time error will be raised otherwise in order to make sure people already using previous translation method (i18n files) won't forgot to move translations back in config.toml.
 # If a translation is missing for language, the `copyright` value will be used instead.
-copyright_translations.fr = "[$TITLE](https://zzmzaw.dev/fr) © $CURRENT_YEAR par [$AUTHOR](https://zzmzaw.dev/fr/about) est sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) ![Creative Commons logo](/img/cc/cc.svg#cc) ![Creative Commons By icon](/img/cc/by.svg#cc) ![Creative Commons SA icon](/img/cc/sa.svg#cc)"
+copyright_translations.fr = "[$TITLE](https://zzmzaw.github.io/fr) © $CURRENT_YEAR par [$AUTHOR](https://zzmzaw.github.io/fr/about) est sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) ![Creative Commons logo](/img/cc/cc.svg#cc) ![Creative Commons By icon](/img/cc/by.svg#cc) ![Creative Commons SA icon](/img/cc/sa.svg#cc)"
 
 # Custom security headers. What urls should your website be able to connect to?
 # You need to specify the CSP and the URLs associated with the directive.
