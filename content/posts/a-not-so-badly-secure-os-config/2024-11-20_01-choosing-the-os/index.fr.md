@@ -7,6 +7,8 @@ tags = ["os", "guix", "nix", "sécurité"]
 
 [extra.series_template_variables]
 position = "premier"
+curr_achievement = "nous avons choisi Guix System comme nouveau système d'exploitation"
+next_objective = "comment se préparer à l'installer"
 +++
 
 Je prévois de passer à un autre système d'exploitation (OS pour Operating System en anglais) dans l'objectif de simplifier ma vie numérique quotidienne qui consiste principalement à surfer sur Internet, à développer et à jouer avec des défis de sécurité (challenges en anglais).

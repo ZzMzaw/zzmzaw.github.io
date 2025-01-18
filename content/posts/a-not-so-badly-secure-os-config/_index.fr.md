@@ -11,12 +11,33 @@ transparent = true
 [extra]
 series = true
 
-series_template_placeholders = ["$POSITION"]
-series_intro_templates.default = """
-<details>
-  <summary>Cet article est le $POSITION de la série: $SERIES_HTML_LINK</summary>
-  $SERIES_PAGES_OLIST
-</details>
+series_template_placeholders = ["$POSITION", "$PREV_ACHIEVEMENT", "$CURR_OBJECTIVE", "$CURR_ACHIEVEMENT", "$NEXT_OBJECTIVE"]
+
+[extra.series_intro_templates]
+default = """
+<div>
+  <details>
+    <summary>Cet article est le $POSITION de la série: $SERIES_HTML_LINK</summary>
+    $SERIES_PAGES_OLIST
+  </details>
+</div>
+"""
+has_prev = """
+<div>
+  <details>
+    <summary>Cet article est le $POSITION de la série: $SERIES_HTML_LINK</summary>
+    $SERIES_PAGES_OLIST
+  </details>
+</div>
+
+Dans <a href="$PREV_PERMALINK" aria_label="$PREV_TITLE">le précédent article de cette série</a>, $PREV_ACHIEVEMENT.
+
+Maintenant, nous allons voir $CURR_OBJECTIVE.
+"""
+
+[extra.series_outro_templates]
+has_next = """
+Maintenant que $CURR_ACHIEVEMENT, voyons $NEXT_OBJECTIVE dans <a href="$NEXT_PERMALINK" aria_label="$NEXT_TITLE">le prochain article de cette série</a>.
 """
 +++
 

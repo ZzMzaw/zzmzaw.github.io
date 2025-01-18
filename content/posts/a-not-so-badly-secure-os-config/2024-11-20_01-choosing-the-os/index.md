@@ -7,6 +7,8 @@ tags = ["os", "guix", "nix", "security"]
 
 [extra.series_template_variables]
 position = "first"
+curr_achievement = "we have chosen Guix System as a new operating system"
+next_objective = "how to prepare for its installation"
 +++
 
 I plan to move to another OS in order to smooth my daily digital life which mostly consists in browsing the Internet, developing and playing around with security challenges.
