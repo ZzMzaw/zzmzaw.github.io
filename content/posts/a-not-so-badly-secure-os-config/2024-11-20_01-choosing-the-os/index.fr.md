@@ -1,13 +1,14 @@
 +++
 title = "Choisir un OS en fonction de ses attentes et des menaces de sécurité"
 description = "Une définition succincte de mes attentes et menaces en matière de systèmes d'exploitation et le choix de celui qui pourrait y répondre le mieux, tout du moins sur le papier"
+updated = 2025-12-21
 
 [taxonomies]
-tags = ["os", "guix", "nix", "sécurité"]
+tags = ["os", "guix", "nix", "aerynos", "sécurité"]
 
 [extra.series_template_variables]
 position = "premier"
-curr_achievement = "nous avons choisi Guix System comme nouveau système d'exploitation"
+curr_achievement = "nous avons choisi AerynOS comme nouveau système d'exploitation"
 next_objective = "comment se préparer à l'installer"
 +++
 
@@ -140,10 +141,37 @@ Mais je pense que je peux donner une chance à Guix System et me replier sur Nix
 Qui plus est, si NixOS se révèle également peu pratique pour moi, j'ai identifié CachyOS (<https://cachyos.org/>) qui est basé sur Arch Linux et devrait être plus rapide à configurer.
 Même si sa configuration n'est pas déclarative, il semble que la sécurité soit une de ses fonctionnalités principales avec la performance.
 
+# Un changement de dernière minute
+
+Six mois après que j'ai écrit cet article, Guix System n'était toujours pas installé sur mon ordinateur portable.
+Il est vrai que je n'ai pas pu y passer autant de temps que j'aurais voulu mais j'ai surtout sous-estimé l'effort qu'il me faudrait pour décider ce avec quoi je voulais commencer et me lancer dans Guile Sheme.
+
+Ne pas sauter le pas après plusieurs mois est peut-être un signe et je me suis retrouvé à jeter un autre coup d'oeil aux systèmes d'exploitation existants à la fin de l'été.
+C'est à ce moment que j'ai découvert AerynOS (<https://aerynos.com/>).
+
+Le système d'exploitation est toujours en alpha mais il coche beaucoup de cases et la direction qu'il prend me laisse penser qu'il pourrait être un bon candidat pour moi.
+
+Je l'avais d'abord ignoré car il était écrit en D (<https://dlang.org/>) et que je ne me sentais pas d'y participer facilement si j'avais voulu.
+Le projet est passé de D à Rust en 2024 et a aussi changé de nom, de Serpent OS à AerynOS, en mars 2025, lui donnant une augmentation de visibilité.
+
+Il supporte déjà le fait de n'avoir pas d'état et les mises à jour atomiques au niveau de la gestion des paquets et même s'il est impératif pour le moment, le projet a pour ambition d'aller vers une approche plus déclarative et cible l'immutabilité [^3] qui sont des éléments importants pour moi.
+
+De plus, le projet couvre tous les outils du boot à la gestion du système d'exploitation, le tout écrit en Rust, moderne et parfaitement intégrés les uns avec les autres.
+
+Enfin, le format utilisé pour la gestion des paquets, basé sur YAML, paraît plus abordable, tout du moins pour moi.
+
+Même si AerynOS n'en est qu'à ses débuts, il est prometteur et je vais l'essayer.
+
+Comme vous pouvez le voir, choisir un système d'exploitation est hautement subjectif car vous devez vous sentir bien avec lui.
+C'est plus un pressentiment en plus de tous les objectifs que vous pourriez avoir exprimés.
+
 Avant de terminer, je voudrais mentionner RedoxOS (<https://www.redox-os.org/>).
 C'est un tout nouveau système d'exploitation généraliste avec une architecture micro-noyau et activement développé.
-Malheureusement, il n'est pas encore assez mature pour une utilisation en production.
+L'approche micro-noyau peut être vraiment intéressante du point de vue de la sécurité.
+Malheureusement, il n'est pas encore assez mature pour une utilisation quotidienne et je n'ai pas d'équipement compatible.
 Si sa configuration est rendue facile ou, encore mieux, déclarative (on peut toujours rêver un peu), cela pourrait devenir un système d'exploitation très intéressant à regarder dans le futur.
+
+<!-- series_outro -->
 
 [^1]: <https://www.gnu.org/philosophy/free-sw.fr.html>
 [^2]: J'ai identifié quelques articles pour commencer.
@@ -157,3 +185,4 @@ Si sa configuration est rendue facile ou, encore mieux, déclarative (on peut to
       - <https://www.youtube.com/watch?v=PiAMRXYIri0>
       - <https://doronbehar.com/articles/why-I-chose-NixOS/>
       - <https://gist.github.com/abcdw/e54807b0a25e61fe2cf1bf8991410f83> 
+[^3]: <https://aerynos.com/blog/2025/03/29/aerynos-the-os-as-infrastructure/>

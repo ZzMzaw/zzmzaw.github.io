@@ -1,9 +1,10 @@
 +++
 title = "Verifying the OpenPGP signature of dowloaded files"
 description = "How to verify an OpenPGP signature and why it is important"
+updated = 2025-12-21
 
 [taxonomies]
-tags = ["security"]
+tags = ["security", "guix"]
 
 [extra]
 mermaid = true
@@ -258,6 +259,179 @@ We have a `BAD signature` error message otherwise:
 If the signature is valid, you can use the file safely.
 But if it is not the case, I would strongly advise discarding the file.
 You can try to download and verify it again, but if the bad signature persists, you should get in touch with the file provider before going further.
+
+# Two real-life examples
+
+When I played with the Guix System (<https://guix.gnu.org>) installation a while ago, I first had to download the relevant images.
+There are two main different images that were of use to me, the official one and an alternate one supporting non-free software.
+
+## Download the Guix official image
+
+The official image can be retrieved from <https://guix.gnu.org/en/download/>.
+
+For each supported architecture, it provides both the image (`.iso` file) and the associated signature file (same name with `.sig` added).
+
+As an example, let's choose the most recent image for `x86_64` architecture at the time of writing:
+* <https://ftpmirror.gnu.org/gnu/guix/guix-system-install-1.4.0.x86_64-linux.iso>
+* <https://ftpmirror.gnu.org/gnu/guix/guix-system-install-1.4.0.x86_64-linux.iso.sig>
+
+<https://ftpmirror.gnu.org/gnu/guix/> redirects you to the closest mirror.
+In that case, we see that the signature is even more important to make sure the mirror did not tamper with the image.
+
+Once image and signature files are downloaded, you can try to verify the signature before importing the key:
+{% wide_container() %}
+```bash
+gpg --verify 'guix-system-install-1.4.0.x86_64-linux.iso.sig'
+#> gpg: assuming signed data in 'guix-system-install-1.4.0.x86_64-linux.iso'
+#> gpg: Signature made Sun Dec 18 22:09:26 2022 CET
+#> gpg:                using RSA key 3CE464558A84FDC69DB40CFB090B11993D9AEBB5
+#> gpg: Can't check signature: No public key
+```
+{% end %}
+
+Let's download the key as indicated in the [Guix System documentation](https://guix.gnu.org/manual/en/html_node/USB-Stick-and-DVD-Installation.html):
+{% wide_container() %}
+```bash
+wget 'https://sv.gnu.org/people/viewgpg.php?user_id=15145' -O 'guix-system-install-key.gpg'
+gpg --show-keys 'guix-system-install-key.gpg'
+#> pub   rsa4096 2014-08-11 [SC] [expires: 2025-04-11]
+#>       3CE464558A84FDC69DB40CFB090B11993D9AEBB5
+#> uid                      Ludovic Courtès <ludo@gnu.org>
+#> uid                      Ludovic Courtès <ludo@chbouib.org>
+#> uid                      Ludovic Courtès (Inria) <ludovic.courtes@inria.fr>
+#> sub   rsa4096 2014-08-11 [E]
+```
+{% end %}
+
+The key fingerprint is the same, so this is the key that signed the image.
+
+The key claims to be owned by Ludovic Courtès, but there is no way to confirm it through the documentation.
+
+Searching `Ludovic Courtès` with your favorite search engine should lead you to his Inria page among the top results: <https://people.bordeaux.inria.fr/lcourtes/>.
+
+Inria is the French National Institute for Research in Digital Science and Technology, and I would tend to trust it.
+
+Ludovic Courtès provides his GPG key's fingerprint on his page, and it matches the one of the key just above:
+
+{{ image_figure(src="img/ludovic-courtes-inria-page.webp", raw_path=true, alt="The Inria page for Ludovic Courtès", full_width=true) }}
+
+Having two different sources pointing to the same key, I assume I can trust the key and so import it:
+{% wide_container() %}
+```bash
+gpg --import 'guix-system-install-key.gpg' 
+#> gpg: key 090B11993D9AEBB5: 127 signatures not checked due to missing keys
+#> gpg: key 090B11993D9AEBB5: public key "Ludovic Courtès <ludo@gnu.org>" imported
+#> gpg: Total number processed: 1
+#> gpg:               imported: 1
+#> gpg: no ultimately trusted keys found
+```
+{% end %}
+
+Once the key is imported, we can now verify that the signature is valid:
+{% wide_container() %}
+```bash
+gpg --verify 'guix-system-install-1.4.0.x86_64-linux.iso.sig' 
+#> gpg: assuming signed data in 'guix-system-install-1.4.0.x86_64-linux.iso'
+#> gpg: Signature made Sun Dec 18 22:09:26 2022 CET
+#> gpg:                using RSA key 3CE464558A84FDC69DB40CFB090B11993D9AEBB5
+#> gpg: Good signature from "Ludovic Courtès <ludo@gnu.org>" [unknown]
+#> gpg:                 aka "Ludovic Courtès <ludo@chbouib.org>" [unknown]
+#> gpg:                 aka "Ludovic Courtès (Inria) <ludovic.courtes@inria.fr>" [unknown]
+#> gpg: WARNING: This key is not certified with a trusted signature!
+#> gpg:          There is no indication that the signature belongs to the owner.
+#> Primary key fingerprint: 3CE4 6455 8A84 FDC6 9DB4  0CFB 090B 1199 3D9A EBB5
+```
+{% end %}
+
+The image has been verified successfully, and it is now possible to use it for installation.
+
+## Download an alternative image for Guix
+
+Nonguix is a popular alternative image for Guix if the official one doesn't suit you for compatibility reasons.
+It can be retrieved from <https://gitlab.com/nonguix/nonguix/-/releases>.
+
+It is built by the team (or the one) maintaining Nonguix and that provides as well the 'nonguix' Guix repository for any non-free software.
+
+For each supported architecture, it provides both the image (`.iso` file) and the associated signature file (same name with `.asc` added).
+
+As an example, let's pick up the last `nonguix-system-install` version for `x86_64` architecture at the time of writing:
+* <https://substitutes.nonguix.org/nonguix-system-install-1.4.0.x86_64-linux.iso>
+* <https://substitutes.nonguix.org/nonguix-system-install-1.4.0.x86_64-linux.iso.asc>
+
+Once image and signature files are downloaded, you can try to verify the signature before importing the key:
+{% wide_container() %}
+```bash
+gpg --verify 'nonguix-system-install-1.4.0.x86_64-linux.iso.asc'
+#> gpg: assuming signed data in 'nonguix-system-install-1.4.0.x86_64-linux.iso'
+#> gpg: Signature made Wed Dec 21 00:24:38 2022 CET
+#> gpg:                using RSA key 81416036E81A5CF78F801071ECFC83988B4E4B9F
+#> gpg: Can't check signature: No public key
+```
+{% end %}
+
+Let's download the key as indicated in the [Nonguix release page](https://gitlab.com/nonguix/nonguix/-/releases/v1.4.0):
+{% wide_container() %}
+```bash
+wget 'https://gitlab.com/jonsger.gpg' -O 'nonguix-system-install-key.gpg'
+gpg --show-keys 'nonguix-system-install-key.gpg'
+#> pub   rsa2048 2014-01-31 [SCA] [expires: 2025-01-28]
+#>       81416036E81A5CF78F801071ECFC83988B4E4B9F
+#> uid                      Jonathan Brielmaier <j.brielmaier@pantherx.org>
+#> uid                      Jonathan Brielmaier <jbrielmaier@opensuse.org>
+#> uid                      jonsger <jonathan.brielmaier@web.de>
+#> sub   rsa2048 2014-01-31 [E] [expires: 2025-01-28]
+```
+{% end %}
+
+The key fingerprint is the same, so this is the key that signed the image.
+
+The key claims to be owned by Jonathan Brielmaier, but there is no way to confirm it through the documentation.
+
+Searching `Jonathan Brielmaier` didn't provide any insightful result, but searching `Jonathan Brielmaier gpg` should lead you to his page on Savanah: <https://savannah.gnu.org/users/jonsger>.
+
+This page allows downloading his GPG key, which matches the key just above:
+{% wide_container() %}
+```bash
+wget 'https://savannah.gnu.org/people/viewgpg.php?user_id=223505' -O 'nonguix-system-install-key2.gpg'
+gpg --show-keys 'nonguix-system-install-key2.gpg'
+#> pub   rsa2048 2014-01-31 [SCA] [expired: 2024-01-29]
+#>       81416036E81A5CF78F801071ECFC83988B4E4B9F
+#> uid                      Jonathan Brielmaier <jbrielmaier@opensuse.org>
+#> uid                      jonsger <jonathan.brielmaier@web.de>
+#> uid                      Jonathan Brielmaier <j.brielmaier@pantherx.org>
+#> sub   rsa2048 2014-01-31 [E] [expired: 2024-01-29]
+```
+{% end %}
+
+Having two different sources pointing to the same key, I assume I can trust the key and so import it:
+{% wide_container() %}
+```bash
+gpg --import 'nonguix-system-install-key.gpg' 
+#> gpg: key ECFC83988B4E4B9F: 2 signatures not checked due to missing keys
+#> gpg: key ECFC83988B4E4B9F: public key "Jonathan Brielmaier <j.brielmaier@pantherx.org>" imported
+#> gpg: Total number processed: 1
+#> gpg:               imported: 1
+#> gpg: no ultimately trusted keys found
+```
+{% end %}
+
+Once the key is imported, we can now verify that the signature is valid:
+{% wide_container() %}
+```bash
+gpg --verify 'nonguix-system-install-1.4.0.x86_64-linux.iso.asc'
+#> gpg: assuming signed data in 'nonguix-system-install-1.4.0.x86_64-linux.iso'
+#> gpg: Signature made Wed Dec 21 00:24:38 2022 CET
+#> gpg:                using RSA key 81416036E81A5CF78F801071ECFC83988B4E4B9F
+#> gpg: Good signature from "Jonathan Brielmaier <j.brielmaier@pantherx.org>" [unknown]
+#> gpg:                 aka "Jonathan Brielmaier <jbrielmaier@opensuse.org>" [unknown]
+#> gpg:                 aka "jonsger <jonathan.brielmaier@web.de>" [unknown]
+#> gpg: WARNING: This key is not certified with a trusted signature!
+#> gpg:          There is no indication that the signature belongs to the owner.
+#> Primary key fingerprint: 8141 6036 E81A 5CF7 8F80  1071 ECFC 8398 8B4E 4B9F
+```
+{% end %}
+
+The image has been verified successfully, and it is now possible to use it for installation.
 
 [^1]: <https://en.wikipedia.org/wiki/Public-key_cryptography>
 [^2]: <https://en.wikipedia.org/wiki/Cryptographic_hash_function>

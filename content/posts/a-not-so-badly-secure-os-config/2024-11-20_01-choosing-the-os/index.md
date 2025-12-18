@@ -1,13 +1,14 @@
 +++
 title = "Choosing an OS according to expectations and security threats"
 description = "A quick definition of my expectations and threats regarding operating systems and the choice of the one that might best meet them, at least on paper"
+updated = 2025-12-21
 
 [taxonomies]
-tags = ["os", "guix", "nix", "security"]
+tags = ["os", "guix", "nix", "aerynos", "security"]
 
 [extra.series_template_variables]
 position = "first"
-curr_achievement = "we have chosen Guix System as a new operating system"
+curr_achievement = "we have chosen AerynOS as a new operating system"
 next_objective = "how to prepare for its installation"
 +++
 
@@ -139,14 +140,40 @@ But I think I can give Guix System a try and fall back to NixOS if it becomes to
 What's more, if NixOS is not practical as well for me, I identified CachyOS (<https://cachyos.org/>) which is based on Arch Linux and may be faster to configure.
 Even if its configuration is not declarative, it seems security is a core feature alongside performance.
 
+## A last-minute change
+
+Six months after writing this article, Guix System was still not installed on my laptop.
+For sure I was not able to spend as much time as I would have liked to on this topic but I underestimated how much effort it would take me to decide what I wanted to start with and step into Guile Scheme.
+
+Not taking the plunge after months may be a sign and I ended up doing another round table of the existing OSes at the end of the summer
+That's when I discovered AerynOS (<https://aerynos.com/>).
+
+This OS is still in alpha but it ticks many boxes and the direction it takes makes me think it may be a good fit for me.
+
+I ignored it at first because it was written in D (<https://dlang.org/>) and I was not confident I could participate easily in it if I wanted to.
+The project transitioned from D to Rust in 2024 and also changed the name from Serpent OS to AerynOS in March 2025, giving them a surge in visibility.
+
+It already supports statelessness and atomic updates in terms of package management and even if it is imperative for now, the project may move toward a more declarative approach and target immutability [^3] which are key to me.
+
+In addition, the project covers all the tools from boot to OS management, all written in Rust, modern and full integrated with each other.
+
+Last but not least, the format used for packaging, YAML-based for now, seems easier to step in, at least to me.
+
+Even if AerynOS is in its early stage, it is really promising and I'll give it a try.
+
+As you can see, choosing an OS is highly subjective because you must feel good with it.
+It is more a gut feeling on top of all the objectives you may have set.
+
 Before finishing, I would like to mention RedoxOS (<https://www.redox-os.org/>).
 It is a completely new general-purpose operating system with a microkernel architecture under active development.
-Unfortunately, it is not mature yet for production use.
+The microkernel approach can be very interesting from a security perspective.
+Unfortunately, it is not mature enough yet for daily use and I don't have any compatible equipment.
 If its configuration is made easy and, even better, in a declarative way (let's dream a bit), it could become a fascinating operating system to look at in the future.
 
+<!-- series_outro -->
 
 [^1]: <https://www.gnu.org/philosophy/free-sw.en.html>
-[^2]: I listed a few articles to start with.
+[^2]: I listed a few articles to start with to compare Guix System and NixOS.
       There is no particular order and it is incomplete, so just use your favorite search engine.
       - <https://forum.systemcrafters.net/t/nixos-vs-guix-a-non-programmers-novice-perspective/875>
       - <https://lwn.net/Articles/962788/>
@@ -156,3 +183,4 @@ If its configuration is made easy and, even better, in a declarative way (let's 
       - <https://www.youtube.com/watch?v=PiAMRXYIri0>
       - <https://doronbehar.com/articles/why-I-chose-NixOS/>
       - <https://gist.github.com/abcdw/e54807b0a25e61fe2cf1bf8991410f83>
+[^3]: <https://aerynos.com/blog/2025/03/29/aerynos-the-os-as-infrastructure/>
