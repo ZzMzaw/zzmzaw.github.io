@@ -29,9 +29,11 @@ taxonomies = [
 # Whether to include the title of the page/section in the index.
 include_title = true
 # Whether to include the description of the page/section in the index.
-include_description = true
+# include_description = true
+include_description = false # TODO: revert once https://github.com/getzola/zola/issues/3098 fix is released
 # Whether to include the path of the page/section in the index.
-include_path = true
+# include_path = true
+include_path = false # TODO: revert once https://github.com/getzola/zola/issues/3098 fix is released
 # Whether to include the rendered content of the page/section in the index.
 include_content = true
 # At which character to truncate the content to. Useful if you have a lot of pages and the index would
@@ -42,12 +44,6 @@ include_content = true
 index_format = "elasticlunr_json"
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
-# To use a Zola built-in theme, CSP needs to allow unsafe-inline for style-src.
-highlight_theme = "css"
-
 # Whether external links are to be opened in a new tab
 # If this is true, a `rel="noopener"` will always automatically be added for security reasons
 external_links_target_blank = true
@@ -57,6 +53,11 @@ external_links_no_follow = true
 external_links_no_referrer = true
 
 bottom_footnotes = true
+
+[markdown.highlighting]
+theme = "catppuccin-frappe"
+style = "class"
+error_on_missing_language = true
 
 [languages.fr]
 # The title, feeds and search for the french language
