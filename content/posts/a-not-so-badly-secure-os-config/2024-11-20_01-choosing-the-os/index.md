@@ -61,7 +61,7 @@ Nevertheless, from time to time, for an uncommon configuration or a specific twe
 
 ## As much free and open source as possible
 
-I am fully in line with the "Free Software Definition" [^1] and I do agree that open source is not always equivalent to free.
+I am fully in line with the "Free Software Definition"[^1] and I do agree that open source is not always equivalent to free.
 Nevertheless, I also acknowledge that I am not able, neither in terms of time invested nor in terms of money, to avoid using any non-free software.
 
 My current situation is that I do my best to use a free software whenever possible and at least open source software.
@@ -113,7 +113,7 @@ They both rely on a declarative package manager to make system configuration rel
 - NixOS package manager is nix, relying on nix language
 - Guix System package manager is guix, relying on Guile Scheme language
 
-As there are already many comparisons between those two operating systems [^2], I'll just explain why I chose Guix System over NixOS.
+As there are already many comparisons between those two operating systems[^2], I'll just explain why I chose Guix System over NixOS.
 This choice is mostly subjective because both are great operating systems.
 You just sometimes need to follow your gut.
 
@@ -153,7 +153,7 @@ This OS is still in alpha but it ticks many boxes and the direction it takes mak
 I ignored it at first because it was written in D (<https://dlang.org/>) and I was not confident I could participate easily in it if I wanted to.
 The project transitioned from D to Rust in 2024 and also changed the name from Serpent OS to AerynOS in March 2025, giving them a surge in visibility.
 
-It already supports statelessness and atomic updates in terms of package management and even if it is imperative for now, the project may move toward a more declarative approach and target immutability [^3] which are key to me.
+It already supports statelessness and atomic updates in terms of package management and even if it is imperative for now, the project may move toward a more declarative approach and target immutability[^3] which are key to me.
 
 In addition, the project covers all the tools from boot to OS management, all written in Rust, modern and full integrated with each other.
 

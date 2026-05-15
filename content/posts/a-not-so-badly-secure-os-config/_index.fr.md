@@ -17,7 +17,7 @@ series_template_placeholders = ["$POSITION", "$PREV_ACHIEVEMENT", "$CURR_OBJECTI
 default = """
 <div>
   <details>
-    <summary>Cet article est le $POSITION de la série: $SERIES_HTML_LINK</summary>
+    <summary>Cet article est le $POSITION de la série : $SERIES_HTML_LINK</summary>
     $SERIES_PAGES_OLIST
   </details>
 </div>
@@ -25,7 +25,7 @@ default = """
 has_prev = """
 <div>
   <details>
-    <summary>Cet article est le $POSITION de la série: $SERIES_HTML_LINK</summary>
+    <summary>Cet article est le $POSITION de la série : $SERIES_HTML_LINK</summary>
     $SERIES_PAGES_OLIST
   </details>
 </div>
@@ -49,15 +49,15 @@ Jouer à des jeux vidéo peut se révéler un peu plus complexe, mais je n'en ai
 Quoi qu'il en soit, utiliser Qubes OS quand on a un besoin de sécurité fort est une évidence pour moi.
 
 Après l'avoir utilisé pendant un moment, j'ai réalisé que c'était peut-être un peu trop pour répondre à mon modèle de menaces actuel au regard des contraintes qu'il impose.
-Les plus importantes contraintes pour moi sont la consommation mémoire et le fait qu'il soit compliqué de générer et de configurer mes qubes [^1] de manière déclarative.
+Les plus importantes contraintes pour moi sont la consommation mémoire et le fait qu'il soit compliqué de générer et de configurer mes qubes[^1] de manière déclarative.
 
 Concernant la première contrainte, je fais généralement plusieurs choses en même temps, comme regarder mes comptes bancaires tout en cherchant des choses sur Internet pour la maison pendant une session de développement qui n'en finit pas.
 Comme tout cela implique des contextes de sécurité différents, ça nécessite des qubes différents et j'ai souvent besoin d'arrêter un qube pour pouvoir en démarrer un autre dû au manque de mémoire.
 8G de RAM n'est définitivement pas suffisant pour des besoins basiques.
 
 Concernant la seconde contrainte, j'ai essayé de jouer avec SaltStack qui est nativement intégré Qubes OS.
-Toutefois, il a des limitations comme la nécessité de séparer la création d'un qube de sa configuration et une réutilisabilité limitée, il implique d'interagir avec dom0 [^2] et la plupart des packages sont liés à Fedora ou Debian pour la partie système d'exploitation.
-De plus, il nécessite pas mal de maintenance, les générations de qubes sont complexes à reproduire dans le temps et les bugs logiciels sont difficiles à fixer dans la mesure où dom0 évolue lentement par conception [^3].
+Toutefois, il a des limitations comme la nécessité de séparer la création d'un qube de sa configuration et une réutilisabilité limitée, il implique d'interagir avec dom0[^2] et la plupart des packages sont liés à Fedora ou Debian pour la partie système d'exploitation.
+De plus, il nécessite pas mal de maintenance, les générations de qubes sont complexes à reproduire dans le temps et les bugs logiciels sont difficiles à fixer dans la mesure où dom0 évolue lentement par conception[^3].
 
 L'objectif de cette série est de trouver une manière déclarative et reproductible de configurer un ordinateur portable avec un Linux plutôt sécurisé.
 

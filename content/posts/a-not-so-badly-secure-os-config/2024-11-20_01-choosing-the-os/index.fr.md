@@ -61,7 +61,7 @@ Cependant, de temps en temps, pour une configuration inhabituelle ou une optimis
 
 ## Aussi libre et en source ouverte que possible
 
-Je suis complètement en phase avec la "Définition du Logiciel Libre" [^1] et je suis d'accord que le fait d'être en source ouverte n'est pas toujours équivalent au fait d'être libre.
+Je suis complètement en phase avec la "Définition du Logiciel Libre"[^1] et je suis d'accord que le fait d'être en source ouverte n'est pas toujours équivalent au fait d'être libre.
 Toutefois, je reconnais aussi que je ne suis pas en capacité, aussi au niveau du temps investi qu'au niveau financier, d'éviter d'utiliser des logiciels non libres.
 
 Ma situation actuelle est que je fais de mon mieux pour utiliser des logiciels libres à chaque fois que c'est possible et, a minima, des logiciels en source ouverte.
@@ -113,7 +113,7 @@ Ils s'appuient tous les deux sur un gestionnaire de paquets déclaratif pour fai
 - Le gestionnaire de paquets de NixOs est nix, s'appuyant sur le langage nix
 - Le gestionnaire de paquets de Guix System est guix, s'appuyant sur le langage Guile Scheme
 
-Vu qu'il y a déjà beaucoup de comparaison entre ces deux systèmes d'exploitation [^2], je vais juste expliquer pourquoi j'ai choisi Guix System par rapport à NixOs.
+Vu qu'il y a déjà beaucoup de comparaison entre ces deux systèmes d'exploitation[^2], je vais juste expliquer pourquoi j'ai choisi Guix System par rapport à NixOs.
 Ce choix est principalement subjectif car les deux sont d'excellents systèmes d'exploitation.
 Il faut parfois simplement suivre son instinct.
 
@@ -154,7 +154,7 @@ Le système d'exploitation est toujours en alpha mais il coche beaucoup de cases
 Je l'avais d'abord ignoré car il était écrit en D (<https://dlang.org/>) et que je ne me sentais pas d'y participer facilement si j'avais voulu.
 Le projet est passé de D à Rust en 2024 et a aussi changé de nom, de Serpent OS à AerynOS, en mars 2025, lui donnant une augmentation de visibilité.
 
-Il supporte déjà le fait de n'avoir pas d'état et les mises à jour atomiques au niveau de la gestion des paquets et même s'il est impératif pour le moment, le projet a pour ambition d'aller vers une approche plus déclarative et cible l'immutabilité [^3] qui sont des éléments importants pour moi.
+Il supporte déjà le fait de n'avoir pas d'état et les mises à jour atomiques au niveau de la gestion des paquets et même s'il est impératif pour le moment, le projet a pour ambition d'aller vers une approche plus déclarative et cible l'immutabilité[^3] qui sont des éléments importants pour moi.
 
 De plus, le projet couvre tous les outils du boot à la gestion du système d'exploitation, le tout écrit en Rust, moderne et parfaitement intégrés les uns avec les autres.
 

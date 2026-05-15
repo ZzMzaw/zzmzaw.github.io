@@ -154,7 +154,7 @@ lsblk -o name,vendor,model,size,type,tran,label,mountpoint
 # Configure the BIOS/UEFI
 
 BIOS/UEFI is what is executed first when we push the power button of the computer.
-BIOS [^1] is older, UEFI [^2] is newer.
+BIOS[^1] is older, UEFI[^2] is newer.
 
 UEFI brings many improvements both from a functionality and security perspective so I would tend to prefer it.
 Anyway, AerynOS only supports UEFI so we won't have the choice here.
@@ -163,7 +163,7 @@ BIOS/UEFI is usually shipped with the motherboard by the manufacturer and might 
 
 FOSS alternatives exist though.
 If you are interested, you can look at [coreboot](https://coreboot.org/) and [libreboot](https://libreboot.org/).
-Some privacy-respectful manufacturers even ship them with their computers [^3].
+Some privacy-respectful manufacturers even ship them with their computers[^3].
 
 Unfortunately, my laptop has a proprietary ASUS UEFI firmware and is not supported by libreboot or alternatives out-of-the-box.
 I won't take action on having it supported now.
@@ -179,7 +179,7 @@ Just restart and try again.
 
 At this stage, the only piece of advice I can give regarding security is to set up a strong password for your BIOS/UEFI.
 Accessing the BIOS/UEFI allows an attacker to modify boot parameters (including boot order, secure boot, ...).
-Locking it is the very first step in an attempt to protect your computer against someone having physical access to it (e.g. evil maid attacks [^4]).
+Locking it is the very first step in an attempt to protect your computer against someone having physical access to it (e.g. evil maid attacks[^4]).
 It will also make the computer harder to reuse in case of theft as it may slow down, but not completely prevent, the reinstallation of a new system.
 Even if today you may need to contact the manufacturer's support most of the time, older devices can have their BIOS password reset by acting on the motherboard (removing the battery, short-circuiting some pins).
 
@@ -221,7 +221,7 @@ AerynOS Live won't boot if it detects that you're not using pure UEFI and you wi
 
 One more step toward fully protecting the computer would have been to enable UEFI Secure Boot.
 This allows a chain of trust to ensure the boot sequence has not been tampered with.
-Unfortunately, AerynOS doesn't support Secure Boot yet at the time of writing [^5].
+Unfortunately, AerynOS doesn't support Secure Boot yet at the time of writing[^5].
 Anyway, it is usually better to activate it later to not overcomplicate the first installation.
 I'll add a dedicated article to this series if I find a way to set it up properly.
 

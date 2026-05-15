@@ -11,9 +11,9 @@ If they both run the same operating system, there is no major issue.
 Nevertheless, if one is running Linux and the other is running Windows, you need to be careful with the filesystem you'll use to format the USB stick.
 You need to pick up a filesystem that can be read by the two operating systems.
 
-Long story short, give `exFAT` a try [^1].
+Long story short, give `exFAT` a try[^1].
 
-`exFAT` [^2] is a filesystem designed by Microsoft in 2006 and specifically optimized for flash memory such as USB sticks and SD cards.
+`exFAT`[^2] is a filesystem designed by Microsoft in 2006 and specifically optimized for flash memory such as USB sticks and SD cards.
 It has been adopted by the SD Association as the default file system for some SD cards larger than 32GB.
 It is not only supported by Windows (since Windows Vista SP1 and Windows Server 2008) but also by macOS (since 10.6.5) and Linux (since kernel 5.4 and even before via FUSE).
 
@@ -121,7 +121,7 @@ Please back up your data before partitioning the USB stick if you want to keep i
 
 First, we need to choose the layout of the partition table between [MBR](<https://en.wikipedia.org/wiki/Master_boot_record>) and [GPT](<https://en.wikipedia.org/wiki/GUID_Partition_Table>).
 
-You'll find many comparisons between the two partition tables on the Internet [^3].
+You'll find many comparisons between the two partition tables on the Internet[^3].
 To make it simple, MBR is older, may have broader compatibility with older operating systems and is limited to 4 primary partitions for a total size of 2TB maximum.
 GPT is newer, more robust, has unlimited partitions and can manage up to 9.4 ZB of storage.
 

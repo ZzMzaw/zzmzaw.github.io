@@ -65,7 +65,7 @@ Toutefois, il s'agit là de menaces actives qui se produisent à un moment où l
 
 # Comment fonctionne une signature numérique ?
 
-La signature et la vérification de la signature s'appuient sur la cryptographie asymétrique [^1] et le hachage cryptographique [^2].
+La signature et la vérification de la signature s'appuient sur la cryptographie asymétrique[^1] et le hachage cryptographique[^2].
 Cela s'applique non seulement à un fichier, mais aussi à n'importe quel type de données.
 
 "Cryptographie asymétrique" signifie juste que nous utilisons une paire de clés, une clé privée et une clé publique, pour exécuter les opérations cryptographiques.
@@ -122,9 +122,9 @@ flowchart LR
 
 # Vérifier la signature OpenPGP d'un fichier téléchargé
 
-PGP [^3] signifie Pretty Good Privacy (qu'on peut traduire par "Plutôt bon niveau de confidentialité") et a donné naissance au standard OpenPGP [^4] qui est largement utilisé pour signer et/ou chiffrer des e-mails et des fichiers.
+PGP[^3] signifie Pretty Good Privacy (qu'on peut traduire par "Plutôt bon niveau de confidentialité") et a donné naissance au standard OpenPGP[^4] qui est largement utilisé pour signer et/ou chiffrer des e-mails et des fichiers.
 
-Vérifie la signature PGP d'un fichier téléchargé implique généralement GNU Privacy Guard [^5], plus connu sous le nom de `gpg` (même s'il pourrait y avoir d'autres méthodes).
+Vérifie la signature PGP d'un fichier téléchargé implique généralement GNU Privacy Guard[^5], plus connu sous le nom de `gpg` (même s'il pourrait y avoir d'autres méthodes).
 
 Sur Linux, c'est aussi simple que d'exécuter l'une des commandes suivantes, en partant du principe que le fichier et la signature sont dans le même dossier (e.g. `/path/to/the/files`) :
 {% wide_container() %}

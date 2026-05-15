@@ -154,7 +154,7 @@ lsblk -o name,vendor,model,size,type,tran,label,mountpoint
 # Configurer le BIOS/UEFI
 
 Le BIOS/UEFI est ce qui est exécuté en premier lorsque nous appuyons sur le bouton d'allumage de notre ordinateur.
-BIOS [^1] est plus vieux, UEFI [^2] est plus récent.
+BIOS[^1] est plus vieux, UEFI[^2] est plus récent.
 
 UEFI amène beaucoup d'améliorations tant d'un point de vue fonctionnel que sécurité, donc j'aurai tendance à le privilégier.
 De toute façon, AerynOS ne supporte que UEFI donc nous n'aurons pas le choix ici.
@@ -163,7 +163,7 @@ Le BIOS/UEFI est habituellement embarqué dans la carte mère par le fabricant e
 
 Des alternatives libres et open source (FOSS) existent cependant.
 Si cela vous intéresse, vous pouvez regarder [coreboot](https://coreboot.org/) et [libreboot](https://libreboot.org/).
-Quelques fabricants respectueux de la vie privée l'embarquent même dans leurs ordinateurs [^3].
+Quelques fabricants respectueux de la vie privée l'embarquent même dans leurs ordinateurs[^3].
 
 Malheureusement, mon ordinateur portable a un microgiciel UEFI ASUS propriétaire et n'est pas supporté directement par libreboot ou des alternatives.
 Je ne vais pas essayer de le faire supporter maintenant.
@@ -179,7 +179,7 @@ Redémarrez et essayez à nouveau.
 
 À ce stade, le seul conseil orienté sécurité que je peux donner est de mettre en place un mot de passe fort pour votre BIOS/UEFI.
 Accéder au BIOS/UEFI permet à un attaquant de modifier les paramètres de lancement de l'ordinateur (incluant l'ordre dans lequel il va chercher les systèmes d'exploitation disponibles, le Secure Boot, ...).
-Le verrouiller est la toute première étape pour essayer de protéger votre ordinateur contre quelqu'un pouvant y accéder physiquement (e.g. l'attaque de la femme de chambre malveillante [^4]).
+Le verrouiller est la toute première étape pour essayer de protéger votre ordinateur contre quelqu'un pouvant y accéder physiquement (e.g. l'attaque de la femme de chambre malveillante[^4]).
 Ça rendra aussi l'ordinateur plus difficile à réutiliser en cas de vol en ralentissant, sans pour autant complètement empêcher, la réinstallation d'un nouveau système.
 Même si aujourd'hui vous devez contacter le support du fabricant la plupart du temps, les matériels anciens peuvent avoir leur mot de passe BIOS remis à zéro en agissant sur la carte mère (en enlevant une pile, en court-circuitant des broches).
 
@@ -221,7 +221,7 @@ AerynOS Live ne démarrera pas s'il détecte que vous n'utilisez pas de l'UEFI p
 
 Une étape supplémentaire vers une protection complète de l'ordinateur aurait été d'activer UEFI Secure Boot.
 Cela permet une chaine de confiance afin de s'assurer que la séquence de démarrage n'a pas été manipulée.
-Malheureusement, AerynOS ne supporte pas encore Secure Boot au moment d'écrire ces lignes [^5].
+Malheureusement, AerynOS ne supporte pas encore Secure Boot au moment d'écrire ces lignes[^5].
 Quoi qu'il en soit, il est généralement préférable de l'activer ultérieurement pour ne pas trop complexifier la première installation.
 J'ajouterai un article dédié à cette série si je trouve un moyen de le mettre en oeuvre correctement.
 

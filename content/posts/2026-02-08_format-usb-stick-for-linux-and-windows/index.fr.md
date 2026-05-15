@@ -11,9 +11,9 @@ S'ils fonctionnent tous les deux sur le même système d'exploitation, il ne dev
 Cependant, si l'un tourne sous Linux et l'autre sous Windows, vous devez faire attention au système de fichiers que vous allez utiliser pour formater la clé USB.
 Vous devez choisir un système de fichiers qui peut être lu par les deux systèmes d'exploitation.
 
-Pour faire court, essayez `exFAT` [^1].
+Pour faire court, essayez `exFAT`[^1].
 
-`exFAT` [^2] est un système de fichiers conçu par Microsoft en 2006 et particulièrement optimisé pour les mémoires flash telles que les clés USB et les cartes SD.
+`exFAT`[^2] est un système de fichiers conçu par Microsoft en 2006 et particulièrement optimisé pour les mémoires flash telles que les clés USB et les cartes SD.
 Il a été adopté par la SD Association comme système de fichiers par défaut pour quelques cartes SD de taille supérieure à 32GB.
 Il est non seulement supporté par Windows (depuis Windows Vista SP1 et Windows Server 2008) mais aussi par macOS (depuis 10.6.5) et Linux (depuis le noyau 5.4 et même avant via FUSE).
 
@@ -121,7 +121,7 @@ Veuillez sauvegarder vos données avant de partitionner la clé USB si vous voul
 
 Nous devons d'abord choisir le format de la table de partitionnement entre [MBR](<https://fr.wikipedia.org/wiki/Master_boot_record>) et [GPT](<https://fr.wikipedia.org/wiki/GUID_Partition_Table>).
 
-Vous trouverez beaucoup de comparaisons entre ces deux tables de partitionnement sur Internet [^3].
+Vous trouverez beaucoup de comparaisons entre ces deux tables de partitionnement sur Internet[^3].
 Pour faire simple, MBR est plus vieux, devrait avoir une meilleure compatibilité avec les systèmes d'exploitation plus anciens et est limité à 4 partitions primaires pour un total de 2TB maximum.
 GPT est plus récent, plus robuste, a un nombre illimité de partitions et peut gérer jusqu'à 9,4 ZB de stockage.
 

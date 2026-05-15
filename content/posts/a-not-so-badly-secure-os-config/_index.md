@@ -48,15 +48,15 @@ Gaming might be a bit more challenging, but I didn't need it.
 Anyway, using Qubes OS when having strong security requirements is a no-brainer to me.
 
 After running it for a while, I realized that it might be a bit too much to cover my current threat model in regard to the constraints it involves.
-The most annoying ones for me are the memory consumption and the fact it is complex to generate and configure my qubes [^1].
+The most annoying ones for me are the memory consumption and the fact it is complex to generate and configure my qubes[^1].
 
 Regarding the former, I am usually doing several things in parallel, such as looking at bank accounts while browsing something for the house during a never ending coding session.
 As all of this involves different security contexts, it takes place in different qubes and I often have to stop a qube in order to start another one due to lack of memory.
 8GB of RAM is definitively not enough for basic needs.
 
 Regarding the latter, I tried to play with SaltStack which is natively integrated within Qubes OS.
-Nevertheless, it has limitations such as splitting qube creation from qube configuration and limited reuse, it involves interacting with dom0 [^2] and have OS packages mostly tied to Fedora or Debian.
-In addition, it requires a lot of maintenance, qubes generation are hard to reproduce and bugs are hard to fix because dom0 slowly evolves by design [^3].
+Nevertheless, it has limitations such as splitting qube creation from qube configuration and limited reuse, it involves interacting with dom0[^2] and have OS packages mostly tied to Fedora or Debian.
+In addition, it requires a lot of maintenance, qubes generation are hard to reproduce and bugs are hard to fix because dom0 slowly evolves by design[^3].
 
 The objective of this series is to find a fully declarative and reproducible way to configure a rather secure Linux laptop.
 

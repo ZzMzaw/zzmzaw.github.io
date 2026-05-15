@@ -6,11 +6,11 @@ description = "How to know how much the hardware we have or want is compatible w
 tags = ["philosophy", "os"]
 +++
 
-Whether it is to better know the hardware or to prepare the move to other operating systems (e.g. Guix System [^1]), it can be useful to know how much our hardware is compatible with *Free* software.
+Whether it is to better know the hardware or to prepare the move to other operating systems (e.g. Guix System[^1]), it can be useful to know how much our hardware is compatible with *Free* software.
 
 # What is *Free* software?
 
-*Free* software has a clear definition by the GNU [^2]:
+*Free* software has a clear definition by the GNU[^2]:
 > “Free software” means software that respects users' freedom and community.
 > **Roughly, it means that the users have the freedom to run, copy, distribute, study, change and improve the software.**
 >
@@ -18,7 +18,7 @@ Whether it is to better know the hardware or to prepare the move to other operat
 
 You need to understand *Free* as in "free speech" (i.e. you can do whatever you want with it) and not as in "free beer" (i.e. you don't pay for it).
 
-*Free* software must not be confused with Open Source that doesn't follow exactly the same philosophy [^3].
+*Free* software must not be confused with Open Source that doesn't follow exactly the same philosophy[^3].
 
 Whether we want to strictly adhere to *Free* software, just try to tend to it or even completely ignore it is a lifestyle choice, just like any other in other areas of life.
 In any case, it's a decision that requires dedication and, like any other lifestyle choice, it deserves respect.

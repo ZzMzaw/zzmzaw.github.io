@@ -9,7 +9,7 @@ tags = ["blog", "zola", "tabi"]
 
 Ceci est mon tout premier post en utilisant Zola (<https://www.getzola.org/>) avec tabi (<https://welpo.github.io/tabi/>) comme thème.
 
-Comme tous ceux qui commencent un nouveau blog en utilisant un SSG [^1], j'allais écrire mon premier post sur comment je l'avais mis en place
+Comme tous ceux qui commencent un nouveau blog en utilisant un SSG[^1], j'allais écrire mon premier post sur comment je l'avais mis en place
 
 Cependant, presque tout est déjà documenté :
 - Comment installer Zola :\
@@ -27,7 +27,7 @@ Toutes les informations ci-dessus font qu'il est plutôt facile de mettre en pla
 
 Au lieu de réécrire ce qui est déjà bien écrit, je vais juste expliquer comment j'ai fini par utiliser Zola et tabi.
 
-J'apprécie beaucoup le langage de programmation Rust [^2] et j'ai décidé de regarder s'il existait un SSG écrit en Rust qui soit FOSS [^3].
+J'apprécie beaucoup le langage de programmation Rust[^2] et j'ai décidé de regarder s'il existait un SSG écrit en Rust qui soit FOSS[^3].
 
 Zola a été le premier résultat de ma recherche.
 Il est non seulement FOSS, mais possède aussi toutes les fonctionnalités que je recherche : multilingue, coloration syntaxique, tags et shortcodes.

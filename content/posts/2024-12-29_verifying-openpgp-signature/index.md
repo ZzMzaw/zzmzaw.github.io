@@ -65,7 +65,7 @@ Nevertheless, those are all active threats which happen at a time when the file 
 
 # How does digital signature work?
 
-Signature and signature verification rely on asymmetric cryptography [^1] and cryptographic hashes [^2].
+Signature and signature verification rely on asymmetric cryptography[^1] and cryptographic hashes[^2].
 It applies not only to a file but to any kind of data.
 
 "Asymmetric cryptography" just means we're using a key pair, a private key and a public key, to perform cryptographic operations.
@@ -122,9 +122,9 @@ flowchart LR
 
 # Verifying the OpenPGP signature of a downloaded file
 
-PGP [^3] stands for Pretty Good Privacy and lead to the creation of the OpenPGP standard [^4], which is widely used to sign and/or encrypt emails and files.
+PGP[^3] stands for Pretty Good Privacy and lead to the creation of the OpenPGP standard[^4], which is widely used to sign and/or encrypt emails and files.
 
-Verifying the PGP signature of a downloaded file usually involves GNU Privacy Guard [^5] also known as `gpg` (even if there could be other methods).
+Verifying the PGP signature of a downloaded file usually involves GNU Privacy Guard[^5] also known as `gpg` (even if there could be other methods).
 
 On Linux, it is as simple as issuing one of the following commands, assuming both the file and its signature are in the same folder (e.g. `/path/to/the/files`):
 {% wide_container() %}

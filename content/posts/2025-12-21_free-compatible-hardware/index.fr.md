@@ -6,11 +6,11 @@ description = "Comment savoir à quel point the matériel que nous avons ou voul
 tags = ["philosophie", "os"]
 +++
 
-Que ce soit pour mieux connaître son matériel ou pour se préparer à passer à un autre système d'exploitation (e.g. Guix System [^1]), il peut être utile de savoir combien notre matériel est compatible avec le logiciel *libre*.
+Que ce soit pour mieux connaître son matériel ou pour se préparer à passer à un autre système d'exploitation (e.g. Guix System[^1]), il peut être utile de savoir combien notre matériel est compatible avec le logiciel *libre*.
 
 # Qu'est-ce que le logiciel *libre* ?
 
-Le logiciel *libre* a une définition claire fournie par le GNU [^2]:
+Le logiciel *libre* a une définition claire fournie par le GNU[^2]:
 > "Logiciel libre" [free software] désigne des logiciels qui respectent la liberté des utilisateurs.
 > **En gros, cela veut dire que les utilisateurs ont la liberté d'exécuter, copier, distribuer, étudier, modifier et améliorer ces logiciels.**
 >
@@ -18,7 +18,7 @@ Le logiciel *libre* a une définition claire fournie par le GNU [^2]:
 
 Vous devez comprendre *libre* dans le sens de la liberté d'expression et non pas dans le sens de gratuit (comme dans entrée libre).
 
-Le logiciel *libre* ne doit pas être confondu avec le logiciel en source ouverte (Open Source) qui ne poursuit pas exactement la même philosophie [^3].
+Le logiciel *libre* ne doit pas être confondu avec le logiciel en source ouverte (Open Source) qui ne poursuit pas exactement la même philosophie[^3].
 
 Que l'on veuille adhérer strictement au logiciel *libre*, juste essayer d'y tendre ou l'ignorer complètement, c'est un choix de vie, comme n'importe quel autre dans d'autres domaines.
 En tout cas, c'est une décision qui demande du dévouement et, comme tout autre choix de vie, elle mérite le respect.
