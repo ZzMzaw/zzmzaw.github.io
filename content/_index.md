@@ -1,5 +1,6 @@
 +++
 title = "Latest posts"
+description = "ZzMzaw's corner in the Great Internet: open-source, privacy and other geekeries"
 sort_by = "date"
 template = "section.html"
 

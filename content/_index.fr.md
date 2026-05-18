@@ -1,5 +1,6 @@
 +++
 title = "Derniers articles"
+description = "Le coin de ZzMzaw dans le Grand Internet: open-source, vie privée et autres geekeries"
 sort_by = "date"
 template = "section.html"
 
