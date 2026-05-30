@@ -20,14 +20,14 @@ Afin d'être sûr qu'installer AerynOS en vaut la peine, nous devons d'abord nou
 
 [Les prérequis matériels](https://aerynos.dev/users/getting-started/requirements/) sont plutôt bas donc nous allons tester AerynOs en conditions réelles avec l'environnement Live.
 
-# Préparation du média d'installation
+## Préparation du média d'installation
 
 Préparer le média d'installation peut se résumer en deux étapes :
 
 1. Télécharger l'image d'installation
 2. Le copier sur un clé USB
 
-## Télécharger l'image d'installation
+### Télécharger l'image d'installation
 
 L'image d'installation est un environnement Live d'AerynOS.
 
@@ -71,7 +71,7 @@ sha256sum -c "AerynOS-2026.05.2-GNOME-live-x86_64.iso.sha256sum"
 
 Maintenant que l'image a été téléchargée et vérifiée avec succès, créons une clé USB depuis laquelle nous pouvons démarrer un ordinateur (bootable).
 
-## Copier l'image d'installation sur une clé USB
+### Copier l'image d'installation sur une clé USB
 
 Tout d'abord, vous devez connaître le *device name* de votre clé USB.
 
@@ -151,7 +151,7 @@ lsblk -o name,vendor,model,size,type,tran,label,mountpoint
 ```
 {% end %}
 
-# Configurer le BIOS/UEFI
+## Configurer le BIOS/UEFI
 
 Le BIOS/UEFI est ce qui est exécuté en premier lorsque nous appuyons sur le bouton d'allumage de notre ordinateur.
 BIOS[^1] est plus vieux, UEFI[^2] est plus récent.
@@ -234,7 +234,7 @@ Cette option devrait être disponible dans un onglet `Boot`.
 Une fois que votre BIOS/UEFI est correctement configuré, assurez-vous de sauvegarder les modifications.
 Cela devrait redémarrer l'ordinateur.
 
-# Démarrer depuis la clé USB
+## Démarrer depuis la clé USB
 
 Tout d'abord, insérez la clé USB dans l'ordinateur.
 Toutefois, comme nous nous sommes assuré que l'ordre de démarrage est limité au disque de l'ordinateur, il ne va pas se lancer depuis la clé USB par défaut.

@@ -17,7 +17,7 @@ Pour faire court, essayez `exFAT`[^1].
 Il a été adopté par la SD Association comme système de fichiers par défaut pour quelques cartes SD de taille supérieure à 32GB.
 Il est non seulement supporté par Windows (depuis Windows Vista SP1 et Windows Server 2008) mais aussi par macOS (depuis 10.6.5) et Linux (depuis le noyau 5.4 et même avant via FUSE).
 
-# Pouvez-vous formater une partition avec `exFAT` ?
+## Pouvez-vous formater une partition avec `exFAT` ?
 
 Le noyau Linux 5.4 a été publié en novembre 2019.
 Je vais supposer que votre système est à jour et me concentrer sur l'utilisation du support natif d'`exFAT` dans le noyau Linux.
@@ -56,7 +56,7 @@ sudo moss install exfatprogs # AerynOS
 
 Maintenant que les outils `exFAT` sont disponibles, partitionnons la clé USB.
 
-# Identifier la clé USB
+## Identifier la clé USB
 
 Avant de partitionner la clé USB, vous devez d'abord connaître son *device name*.
 
@@ -109,7 +109,7 @@ sudo dmesg --follow-new
 
 Nous pouvons extraire le *device name* `sdY` des messages.
 
-# Partitionner la clé USB
+## Partitionner la clé USB
 
 Maintenant que nous avons trouvé l'équipement avec lequel nous devons travailler, partitionnons-le.
 
@@ -142,7 +142,7 @@ Les deux prochaines parties vont décrire l'utilisation de chaque table de parti
 
 Vous devez juste en appliquer une seule et je vous conseille [de partir sur MBR](#mbr-partition).
 
-## Utiliser la table de partitionnement MBR {#mbr-partition}
+### Utiliser la table de partitionnement MBR {#mbr-partition}
 
 {% admonition(type="warning") %}
 D'après les tests que j'ai faits, c'est la table de partitionnement que je recommanderais.
@@ -171,7 +171,7 @@ Vu que `parted` ne propose pas `exfat` comme type de système de fichiers, il es
 
 La partition étant créée, nous devons maintenant [la formater](#format-partition).
 
-## Utiliser la table de partitionnement GPT {#gpt-partition}
+### Utiliser la table de partitionnement GPT {#gpt-partition}
 
 {% admonition(type="warning") %}
 D'après les tests que j'ai faits, je ne recommande pas cette table de partitionnement.
@@ -200,7 +200,7 @@ Vu que `parted` ne propose pas `exfat` comme type de système de fichiers, il es
 
 La partition étant créée, nous devons maintenant [la formater](#format-partition).
 
-## Formater la partition avec `exFAT` {#format-partition}
+### Formater la partition avec `exFAT` {#format-partition}
 
 {% wide_container() %}
 ```bash

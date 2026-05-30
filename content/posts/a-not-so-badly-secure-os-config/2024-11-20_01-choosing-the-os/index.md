@@ -24,9 +24,9 @@ I would recommend using this article to help you identify your own expectations 
 Last but not least, this brief comparison is based on data collected from the Internet.
 At the time of writing, I did not perform any experiments, and the outcome may differ from the expectations described here.
 
-# What do I expect?
+## What do I expect?
 
-## Great developer experience 
+### Great developer experience 
 
 I spend a lot of time developing so the system must allow an excellent experience as a developer, including for mobile.
 Being able to connect with an android phone is a must in order to keep mine up-to-date.
@@ -36,14 +36,14 @@ I want this system to improve my development productivity in a reliable, reprodu
 Last but not least, being able to test new tools, new libraries or new way of working should be made easy without putting the whole system at risk.
 Being able to get rid of anything useless to me is a must-have.
 
-## Easy to keep up-to-date
+### Easy to keep up-to-date
 
 I want to be able to keep the system running until I can invest some time to properly manage an upgrade or upgrade in a granular way a part of the system without requiring to look at the entire system.
 
 If it forces me to upgrade, install and test again everything when I don't have enough time, I will end up doing the minimal quick and dirty stuff to be able to use the system with minimal capabilities.
 The more I use it in this state, the less I feel motivated to invest time to upgrade it and, I just end up thinking about how to completely replace it with something better.
 
-## Fully configurable in a declarative way through text files
+### Fully configurable in a declarative way through text files
 
 I don't like GUIs... at least for configuring my operating system.
 I want to be able to write down in a text file what I expect from the system and let it configure itself to reach this desired state properly.
@@ -51,7 +51,7 @@ Advantages of text files are that they are easy to store, easy to back up, easy 
 
 Cherry on the cake, if the system configuration is reproducible, it would make sure I can rebuild everything from scratch without worrying about it.
 
-## Make software built from sources easy but only when needed
+### Make software built from sources easy but only when needed
 
 Build software from sources can really be time-consuming and become a nightmare.
 Having an incremental build and relying on binaries caches is indispensable.
@@ -59,7 +59,7 @@ Self-hostable binaries cache is even better, even if it requires enough maturity
 
 Nevertheless, from time to time, for an uncommon configuration or a specific tweak, building from sources can be really useful.
 
-## As much free and open source as possible
+### As much free and open source as possible
 
 I am fully in line with the "Free Software Definition"[^1] and I do agree that open source is not always equivalent to free.
 Nevertheless, I also acknowledge that I am not able, neither in terms of time invested nor in terms of money, to avoid using any non-free software.
@@ -68,7 +68,7 @@ My current situation is that I do my best to use a free software whenever possib
 I may use closed-source software in places I am not confident to deal with (e.g. boot sequence, GPU driver ...).
 Maybe some day, I'll feel confident enough to invest more time and resources in getting rid of any non-free software I use.
 
-# A simple threat model
+## A simple threat model
 
 A threat is a potential or actual undesirable event that may be malicious (such a ransomware attack) or incidental (such as a computer crash).
 
@@ -77,7 +77,7 @@ In my case, the threat model will be contextualised to what could happen to my p
 This has to be kept in mind not only while looking at this model but also while applying the configuration I'll propose as this may not suit your own situation.
 Nevertheless, I'll try to move the security level above what is just require from this analysis everytime it is possible and remains usable according to my personal feeling.
 
-## Unavailability due to laptop failure or destruction
+### Unavailability due to laptop failure or destruction
 
 A laptop can break down at any time, whether due to wear and tear or an accident.
 
@@ -86,13 +86,13 @@ I may cover data backup and recovery in the future but it is out of the scope of
 
 Anyway, if my laptop becomes impossible to use, I want it to be easily reinstalled as it was once it is repaired (or replaced).
 
-## Data discolure due to laptop theft
+### Data discolure due to laptop theft
 
 A laptop is considered a valuable object and can be the target of a theft.
 
 If it happens, I want to make sure it will be if not impossible at least very hard to get access to the data hosted in it.
 
-## System compromise due to Internet browsing
+### System compromise due to Internet browsing
 
 I spend a lot of time on the Internet and I develop every time I can.
 There is always a risk of compromise either by browsing directly or by downloading bad things (binary, code, dependency).
@@ -100,7 +100,7 @@ There is always a risk of compromise either by browsing directly or by downloadi
 If it happens, I want the compromise to be limited to the browsing session with as few way to persist after a reboot as possible.
 In addition, the compromise should be limited to a particular context (e.g. the development session) wihtout being able to easily spread to the entire system.
 
-# Choosing my new operating system
+## Choosing my new operating system
 
 Due to the fact I would like a declarative and reproducible way to configure my operating system, I quickly end-up with the two following ones:
 
@@ -140,7 +140,7 @@ But I think I can give Guix System a try and fall back to NixOS if it becomes to
 What's more, if NixOS is not practical as well for me, I identified CachyOS (<https://cachyos.org/>) which is based on Arch Linux and may be faster to configure.
 Even if its configuration is not declarative, it seems security is a core feature alongside performance.
 
-## A last-minute change
+### A last-minute change
 
 Six months after writing this article, Guix System was still not installed on my laptop.
 For sure I was not able to spend as much time as I would have liked to on this topic but I underestimated how much effort it would take me to decide what I wanted to start with and step into Guile Scheme.

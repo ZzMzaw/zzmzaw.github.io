@@ -24,9 +24,9 @@ Je conseille donc d'utiliser cet article comme un support pour vous aider à ide
 Enfin et surtout, cette comparaison succincte est basée sur des informations collectées depuis Internet.
 Je n'ai encore fait aucune expérimentation au moment où j'écris ces lignes et le résultat pourrait être très loin des attentes décrites ici.
 
-# Quelles sont mes attentes ?
+## Quelles sont mes attentes ?
 
-## Une agréable expérience développeur
+### Une agréable expérience développeur
 
 Je passe beaucoup de temps à développer, donc le système doit permettre unei excellente expérience en tant que développeur, incluant pour du mobile.
 Être capable de me connecter avec un téléphone Android est indispensable afin de garder le mien à jour.
@@ -36,14 +36,14 @@ Je veux que ce système améliore ma productivité au niveau du développement d
 Enfin, être capable de tester de nouveaux outils, de nouvelles bibliothèques ou de nouvelles façons de travailler doit être rendu facile sans mettre à risque le système entier.
 Pouvoir se débarrasser de tout ce qui ne m'est pas utile est indispensable.
 
-## Facile à maintenir à jour
+### Facile à maintenir à jour
 
 Je veux être capable de garder le système en état de fonctionnement jusqu'à pouvoir investir un peu de temps pour gérer proprement une mise à jour ou pouvoir mettre à jour une partie de ce dernier sans être obligé de regarder l'ensemble du système.
 
 Si le système me force à mettre à jour, installer et tester à nouveau tout quand je n'en ai pas le temps, je vais finir par faire des choses vite et mal faites pour utiliser le système avec un minimum de fonctionnalités.
 Plus je l'utilise dans cet état, moins je suis motivé pour prendre le temps de le mettre à jour et je finis par penser comment complètement le remplacer avec quelque chose de mieux.
 
-## Complètement configurable de manière déclarative avec des fichiers texte
+### Complètement configurable de manière déclarative avec des fichiers texte
 
 Je n'aime pas les interfaces graphiques... tout du moins, pour configurer mon système d'exploitation.
 Je veux être en capacité d'écrire dans des fichiers texte ce que j'attends de mon système et le laisser se configurer tout seul pour atteindre l'état désiré correctement.
@@ -51,7 +51,7 @@ L'avantage des fichiers texte est qu'ils sont faciles à stocker, faciles à sau
 
 Cerise sur le gâteau, si la configuration du système est reproductible, cela m'assurerait que je peux tout reconstruire à partir de zéro sans souci.
 
-## Faciliter la compilation de logiciels depuis leur code source, mais seulement quand c'est nécessaire
+### Faciliter la compilation de logiciels depuis leur code source, mais seulement quand c'est nécessaire
 
 Compiler des logiciels depuis leur code source peut prendre énormément de temps et devenir un cauchemar.
 Avoir une construction incrémentale et pouvoir s'appuyer sur un cache pour les fichiers compilés est donc indispensable.
@@ -59,7 +59,7 @@ Pouvoir héberger ces caches localement est encore mieux même si cela nécessit
 
 Cependant, de temps en temps, pour une configuration inhabituelle ou une optimisation particulière, compiler depuis le code source peut être vraiment utile.
 
-## Aussi libre et en source ouverte que possible
+### Aussi libre et en source ouverte que possible
 
 Je suis complètement en phase avec la "Définition du Logiciel Libre"[^1] et je suis d'accord que le fait d'être en source ouverte n'est pas toujours équivalent au fait d'être libre.
 Toutefois, je reconnais aussi que je ne suis pas en capacité, aussi au niveau du temps investi qu'au niveau financier, d'éviter d'utiliser des logiciels non libres.
@@ -68,7 +68,7 @@ Ma situation actuelle est que je fais de mon mieux pour utiliser des logiciels l
 Il peut m'arriver d'utiliser des logiciels en source fermée dans des endroits où je ne suis pas confiant d'intervenir (e.g. la séquence de boot, le driver de la carte graphique...).
 Je me sentirai, un jour peut-être, suffisamment confiant pour investir plus de temps et d'énergie dans le fait de me débarrasser de tous les logiciels non libres que j'utilise.
 
-# Un modèle de menaces simple
+## Un modèle de menaces simple
 
 Une menace est un événement indésirable potentiel ou actuel qui peut être malicieux (comme une attaque par ransomware) ou accidentel (comme une panne d'ordinateur).
 
@@ -77,7 +77,7 @@ Dans mon cas, le modèle de menaces sera contextualisé à ce qui peut arriver �
 Cela doit être gardé à l'esprit non seulement en regardant ce modèle, mais aussi en appliquant la configuration que je vais proposer car cela pourrait ne pas convenir à votre propre situation.
 Cependant, je vais essayer d'amener le niveau de sécurité au-dessus de ce dont j'ai besoin par rapport à cette analyse à chaque fois que c'est possible et que ça reste utilisable par rapport à mon ressenti personnel.
 
-## Indisponibilité à cause d'une panne ou de la destruction de l'ordinateur portable
+### Indisponibilité à cause d'une panne ou de la destruction de l'ordinateur portable
 
 Un ordinateur peut casser n'importe quand, que ce soit dû à l'usure normale ou à un accident.
 
@@ -86,13 +86,13 @@ Je vais essayer de couvrir le sujet de la sauvegarde et de la restauration de do
 
 Quoi qu'il en soit, si mon ordinateur portable devient impossible à utiliser, je veux pouvoir le réinstaller facilement dans l'état dans lequel il était une fois réparé (ou remplacé).
 
-## Divulgation d'information à cause d'un vol de l'ordinateur portable
+### Divulgation d'information à cause d'un vol de l'ordinateur portable
 
 Un ordinateur portable est considéré comme un objet de valeur et peut donc être la cible d'un vol.
 
 Si cela arrive, je veux faire en sorte que ce soit impossible ou au moins très difficile d'accéder aux données qu'il contient.
 
-## Compromission du système à cause de la navigation sur Internet
+### Compromission du système à cause de la navigation sur Internet
 
 Je passe beaucoup de temps sur Internet et je développe à chaque fois que je peux. 
 Il y a toujours un risque de compromission soit par la navigation elle-même, soit en téléchargeant de mauvaises choses (binaires, code, dépendances).
@@ -100,7 +100,7 @@ Il y a toujours un risque de compromission soit par la navigation elle-même, so
 Si cela arrive, je veux que la compromission soit limitée à la session de navigation, avec aussi peu de possibilités de persistance après un redémarrage que possible.
 De plus, la compromission devrait être limitée à un contexte particulier (e.g. la session de développement) sans pouvoir s'étendre facilement à l'ensemble du système.
 
-# Choisir mon nouveau système d'exploitation
+## Choisir mon nouveau système d'exploitation
 
 Du fait que je voulais configurer mon système d'exploitation de manière déclarative et reproductible, je suis rapidement arrivé aux deux suivants :
 
@@ -141,7 +141,7 @@ Mais je pense que je peux donner une chance à Guix System et me replier sur Nix
 Qui plus est, si NixOS se révèle également peu pratique pour moi, j'ai identifié CachyOS (<https://cachyos.org/>) qui est basé sur Arch Linux et devrait être plus rapide à configurer.
 Même si sa configuration n'est pas déclarative, il semble que la sécurité soit une de ses fonctionnalités principales avec la performance.
 
-# Un changement de dernière minute
+## Un changement de dernière minute
 
 Six mois après que j'ai écrit cet article, Guix System n'était toujours pas installé sur mon ordinateur portable.
 Il est vrai que je n'ai pas pu y passer autant de temps que j'aurais voulu mais j'ai surtout sous-estimé l'effort qu'il me faudrait pour décider ce avec quoi je voulais commencer et me lancer dans Guile Sheme.

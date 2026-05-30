@@ -8,7 +8,7 @@ tags = ["philosophy", "os"]
 
 Whether it is to better know the hardware or to prepare the move to other operating systems (e.g. Guix System[^1]), it can be useful to know how much our hardware is compatible with *Free* software.
 
-# What is *Free* software?
+## What is *Free* software?
 
 *Free* software has a clear definition by the GNU[^2]:
 > “Free software” means software that respects users' freedom and community.
@@ -34,7 +34,7 @@ They might not be *Free* though.
 
 The question now is to know how much the hardware components we have are compatible with *Free* drivers.
 
-# Would my laptop work with *Free* software only?
+## Would my laptop work with *Free* software only?
 
 I currently use an ASUS Notebook UX330U with a Core i7 7500 as CPU, 8GB of RAM and about 500GB of SSD storage.
 

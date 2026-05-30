@@ -16,7 +16,7 @@ If it is not the case, you should think twice before using the file you just dow
 
 Anyway, when a signature is made available, you should take the time to verify it.
 
-# Why verifying the signature of a downloaded file?
+## Why verifying the signature of a downloaded file?
 
 We can consider there are multiple actions and actors when a file is made available for download and downloaded:
 
@@ -63,7 +63,7 @@ It doesn't prevent neither private key misuse nor abuse.
 
 Nevertheless, those are all active threats which happen at a time when the file provider is usually careful about the file and this should be covered by the trust you have in the file provider.
 
-# How does digital signature work?
+## How does digital signature work?
 
 Signature and signature verification rely on asymmetric cryptography[^1] and cryptographic hashes[^2].
 It applies not only to a file but to any kind of data.
@@ -120,7 +120,7 @@ flowchart LR
     a_compare -- Not equals --> s_sign_ko
 {% end %}
 
-# Verifying the OpenPGP signature of a downloaded file
+## Verifying the OpenPGP signature of a downloaded file
 
 PGP[^3] stands for Pretty Good Privacy and lead to the creation of the OpenPGP standard[^4], which is widely used to sign and/or encrypt emails and files.
 
@@ -260,12 +260,12 @@ If the signature is valid, you can use the file safely.
 But if it is not the case, I would strongly advise discarding the file.
 You can try to download and verify it again, but if the bad signature persists, you should get in touch with the file provider before going further.
 
-# Two real-life examples
+## Two real-life examples
 
 When I played with the Guix System (<https://guix.gnu.org>) installation a while ago, I first had to download the relevant images.
 There are two main different images that were of use to me, the official one and an alternate one supporting non-free software.
 
-## Download the Guix official image
+### Download the Guix official image
 
 The official image can be retrieved from <https://guix.gnu.org/en/download/>.
 
@@ -345,7 +345,7 @@ gpg --verify 'guix-system-install-1.4.0.x86_64-linux.iso.sig'
 
 The image has been verified successfully, and it is now possible to use it for installation.
 
-## Download an alternative image for Guix
+### Download an alternative image for Guix
 
 Nonguix is a popular alternative image for Guix if the official one doesn't suit you for compatibility reasons.
 It can be retrieved from <https://gitlab.com/nonguix/nonguix/-/releases>.

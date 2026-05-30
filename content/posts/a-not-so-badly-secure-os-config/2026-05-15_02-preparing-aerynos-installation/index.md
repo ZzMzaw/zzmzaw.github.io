@@ -20,14 +20,14 @@ In order to make sure installing AerynOS is worth it, we first need to ensure th
 
 [Hardware requirements](https://aerynos.dev/users/getting-started/requirements/) are pretty low so we'll test AerynOS for real with the Live environment.
 
-# Preparation of the installation media
+## Preparation of the installation media
 
 Preparing the installation media can be summarized in two steps:
 
 1. Download the installation image
 2. Copy it to a USB stick
 
-## Download the installation image
+### Download the installation image
 
 The installation image is an AerynOS Live environment.
 
@@ -71,7 +71,7 @@ sha256sum -c "AerynOS-2026.05.2-GNOME-live-x86_64.iso.sha256sum"
 
 Now that the image has been downloaded and successfully verified, let's create a bootable USB stick.
 
-## Copy the installation image to a USB stick
+### Copy the installation image to a USB stick
 
 First, you need to know the *device name* of your USB stick.
 
@@ -151,7 +151,7 @@ lsblk -o name,vendor,model,size,type,tran,label,mountpoint
 ```
 {% end %}
 
-# Configure the BIOS/UEFI
+## Configure the BIOS/UEFI
 
 BIOS/UEFI is what is executed first when we push the power button of the computer.
 BIOS[^1] is older, UEFI[^2] is newer.
@@ -234,7 +234,7 @@ This option should be available in a `Boot` tab.
 Once your BIOS/UEFI is properly configured, be sure to save changes.
 This will restart your computer.
 
-# Boot from the USB stick
+## Boot from the USB stick
 
 Firstly, plug the USB stick into your computer.
 Nevertheless, as we ensured the boot order is limited to the computer's drive, it will not boot from the USB stick by default.

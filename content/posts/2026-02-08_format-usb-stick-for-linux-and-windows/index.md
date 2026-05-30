@@ -17,7 +17,7 @@ Long story short, give `exFAT` a try[^1].
 It has been adopted by the SD Association as the default file system for some SD cards larger than 32GB.
 It is not only supported by Windows (since Windows Vista SP1 and Windows Server 2008) but also by macOS (since 10.6.5) and Linux (since kernel 5.4 and even before via FUSE).
 
-# Can you format a partition with `exFAT`?
+## Can you format a partition with `exFAT`?
 
 Linux kernel 5.4 was released in November 2019.
 I will assume your system is up-to-date and focus on using `exFAT` native support by the Linux kernel.
@@ -56,7 +56,7 @@ sudo moss install exfatprogs # AerynOS
 
 Now that `exFAT` tools are available, let's partition the USB stick.
 
-# Identify the USB stick
+## Identify the USB stick
 
 Before partitioning the USB stick, you need first to know its *device name*.
 
@@ -109,7 +109,7 @@ sudo dmesg --follow-new
 
 We can extract the *device name* `sdY` from the messages.
 
-# Partition the USB stick
+## Partition the USB stick
 
 Now that we've found the device we need to deal with, let's partition it.
 
@@ -142,7 +142,7 @@ The next two parts will describe the use of each partition table.
 
 You only need to apply one and I would advise you [to go with MBR](#mbr-partition).
 
-## Use an MBR partition table {#mbr-partition}
+### Use an MBR partition table {#mbr-partition}
 
 {% admonition(type="warning") %}
 This is the partition table I recommend according to tests I made.
@@ -171,7 +171,7 @@ We can use `ntfs` instead of `exfat` as `parted` doesn't propose it as a filesys
 
 Now that the partition is created, we just need to [format it](#format-partition).
 
-## Use a GPT partition table {#gpt-partition}
+### Use a GPT partition table {#gpt-partition}
 
 {% admonition(type="warning") %}
 I DO NOT recommend this partition table according to tests I made.
@@ -200,7 +200,7 @@ We can use `ntfs` instead of `exfat` as `parted` doesn't propose it as a filesys
 
 Now that the partition is created, we just need to [format it](#format-partition).
 
-## Format the partition with `exFAT` {#format-partition}
+### Format the partition with `exFAT` {#format-partition}
 
 {% wide_container() %}
 ```bash

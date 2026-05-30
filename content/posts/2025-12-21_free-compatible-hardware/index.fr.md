@@ -8,7 +8,7 @@ tags = ["philosophie", "os"]
 
 Que ce soit pour mieux connaître son matériel ou pour se préparer à passer à un autre système d'exploitation (e.g. Guix System[^1]), il peut être utile de savoir combien notre matériel est compatible avec le logiciel *libre*.
 
-# Qu'est-ce que le logiciel *libre* ?
+## Qu'est-ce que le logiciel *libre* ?
 
 Le logiciel *libre* a une définition claire fournie par le GNU[^2]:
 > "Logiciel libre" [free software] désigne des logiciels qui respectent la liberté des utilisateurs.
@@ -34,7 +34,7 @@ Ils pourraient néanmoins ne pas être *libre*s.
 
 La question est maintenant de savoir à quel point les composants matériels que nous avons sont compatibles avec des pilotes *libre*s.
 
-# Mon ordinateur portable fonctionnerait-il uniquement avec du logiciel libre ?
+## Mon ordinateur portable fonctionnerait-il uniquement avec du logiciel libre ?
 
 J'utilise actuellement un ASUS Notebook UX330U avec pour CPU un Core i7 7500, 8GB de RAM et environ 500GB de disque SSD.
 

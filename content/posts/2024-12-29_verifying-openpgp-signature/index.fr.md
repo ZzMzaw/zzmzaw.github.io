@@ -16,7 +16,7 @@ Si ce n'est pas le cas, vous devriez y réfléchir à deux fois avant d'utiliser
 
 Quoi qu'il en soit, si une signature est disponible, vous devriez prendre le temps de la vérifier.
 
-# Pourquoi vérifier la signature d'un fichier téléchargé ?
+## Pourquoi vérifier la signature d'un fichier téléchargé ?
 
 Nous pouvons considérer qu'il y a plusieurs actions et acteurs lorsqu'un fichier est rendu disponible au téléchargement et téléchargé :
 
@@ -63,7 +63,7 @@ Cela n'empêche pas non plus une mauvaise utilisation ou un abus de la clé priv
 
 Toutefois, il s'agit là de menaces actives qui se produisent à un moment où le fournisseur du fichier est habituellement attentif au fichier et cela devrait être couvert par la confiance que vous avez envers le fournisseur du fichier.
 
-# Comment fonctionne une signature numérique ?
+## Comment fonctionne une signature numérique ?
 
 La signature et la vérification de la signature s'appuient sur la cryptographie asymétrique[^1] et le hachage cryptographique[^2].
 Cela s'applique non seulement à un fichier, mais aussi à n'importe quel type de données.
@@ -120,7 +120,7 @@ flowchart LR
     a_compare -- Pas égal --> s_sign_ko
 {% end %}
 
-# Vérifier la signature OpenPGP d'un fichier téléchargé
+## Vérifier la signature OpenPGP d'un fichier téléchargé
 
 PGP[^3] signifie Pretty Good Privacy (qu'on peut traduire par "Plutôt bon niveau de confidentialité") et a donné naissance au standard OpenPGP[^4] qui est largement utilisé pour signer et/ou chiffrer des e-mails et des fichiers.
 
@@ -260,13 +260,13 @@ Si la signature est valide, vous pouvez utiliser le fichier en toute sécurité.
 Mais si ce n'est pas le cas, je vous conseille vivement de le supprimer.
 Vous pouvez essayer de le télécharger et de le vérifier à nouveau, mais si la mauvaise signature persiste, vous devriez contacter le fournisseur du fichier avant d'aller plus loin.
 
-# Deux exemples réels
+## Deux exemples réels
 
 
 Quand j'ai joué avec l'installation de Guix System (<https://guix.gnu.org>) il y a quelques temps, j'ai dû d'abord télécharger les images appropriées.
 Il y a deux images principales qui m'ont été utiles, l'officielle et une alternative supportant des logiciels non libres.
 
-## Télécharger l'image officielle de Guix
+### Télécharger l'image officielle de Guix
 
 L'image officielle peut être récupérée depuis <https://guix.gnu.org/en/download/>.
 
@@ -346,7 +346,7 @@ gpg --verify 'guix-system-install-1.4.0.x86_64-linux.iso.sig'
 
 L'image a été vérifiée avec succès et il est maintenant possible de l'utiliser pour l'installation.
 
-## Télécharger une image alternative pour Guix
+### Télécharger une image alternative pour Guix
 
 Nonguix est une image alternative populaire pour Guix lorsque l'image officielle ne convient pas pour des raisons de compatibilité.
 Elle peut être récupérée depuis <https://gitlab.com/nonguix/nonguix/-/releases>.
